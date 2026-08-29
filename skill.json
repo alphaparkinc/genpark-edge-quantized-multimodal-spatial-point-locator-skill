@@ -1,0 +1,38 @@
+{
+  "name": "genpark-edge-quantized-multimodal-spatial-point-locator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Edge-quantized multimodal vision-language executor predicting spatial point coordinates and dense visual captions.",
+  "author": "genpark",
+  "category": "edge-vlm",
+  "tags": [
+    "minicpm-v",
+    "molmo",
+    "spatial-points",
+    "edge-vlm",
+    "point-grounding"
+  ],
+  "inputs": {
+    "edge_image_url": {
+      "type": "string"
+    },
+    "point_prompt": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "point_session_id": {
+      "type": "string"
+    },
+    "predicted_points": {
+      "type": "array"
+    },
+    "inference_memory_mb": {
+      "type": "integer"
+    },
+    "coordinate_hit_rate_pct": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
